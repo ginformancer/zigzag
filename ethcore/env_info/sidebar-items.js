@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["EnvInfo","Information concerning the execution environment for a message-call/contract-creation."]],"type":[["LastHashes","Simple vector of hashes, should be at most 256 items large, can be smaller if being used for a block whose number is less than 257."]]});

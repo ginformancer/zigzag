@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["blockchain","Blockchain database."],["extras","Blockchain DB extras."]],"struct":[["CacheSize","Represents blockchain's in-memory cache size in bytes."],["Config","Blockchain configuration."],["TreeRoute","Represents a tree route between `from` block and `to` block:"]]});

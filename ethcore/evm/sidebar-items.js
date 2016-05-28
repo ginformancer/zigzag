@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["VMType","Type of EVM to use."]],"mod":[["evm","Evm interface."],["ext","Interface for Evm externalities."],["factory","Evm factory."],["interpreter",""],["schedule","Cost schedule and other parameterisations for the EVM."]]});

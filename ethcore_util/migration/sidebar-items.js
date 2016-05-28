@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","Migration error."]],"struct":[["Config","Migration config."],["Manager","Manages database migration."],["MigrationIterator","Database iterator with `Item` complient with migration `Manager` interface."]],"trait":[["Destination","Migration destination."],["Migration","Single migration."]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["new_test_authority","Create a new test chain spec with `BasicAuthority` consensus engine."]],"struct":[["BasicAuthority","Engine using `BasicAuthority` proof-of-work consensus algorithm, suitable for Ethereum mainnet chains in the Olympic, Frontier and Homestead eras."],["BasicAuthorityParams","`BasicAuthority` params."]]});

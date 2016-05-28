@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Transaction","Transaction test transaction deserialization."]]});

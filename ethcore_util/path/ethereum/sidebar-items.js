@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["default","Default path for ethereum installation on posix system which is not Mac OS"],["with_default","Get the specific folder inside default ethereum installation"]]});

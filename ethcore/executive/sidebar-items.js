@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Executed","Transaction execution receipt."],["Executive","Transaction executor."],["TransactOptions","Transaction execution options."]],"type":[["ExecutionResult","Transaction execution result."]]});

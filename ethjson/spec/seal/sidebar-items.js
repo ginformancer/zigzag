@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Seal","Seal variants."]],"struct":[["Ethereum","Ethereum seal."],["Generic","Generic seal."]]});

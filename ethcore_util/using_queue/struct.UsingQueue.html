@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `UsingQueue` struct in crate `ethcore_util`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, UsingQueue">
+
+    <title>ethcore_util::using_queue::UsingQueue - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>ethcore_util</a>::<wbr><a href='index.html'>using_queue</a></p><script>window.sidebarCurrent = {name: 'UsingQueue', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>ethcore_util</a>::<wbr><a href='index.html'>using_queue</a>::<wbr><a class='struct' href=''>UsingQueue</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-5473' class='srclink' href='../../src/ethcore_util/util/src/using_queue.rs.html#21-28' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct UsingQueue&lt;T&gt; <span class='where'>where T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a></span> {
+    // some fields omitted
+}</pre><div class='docblock'><p>Special queue-like datastructure that includes the notion of
+usage to avoid items that were queued but never used from making it into
+the queue.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;T&gt; <a class='struct' href='../../ethcore_util/using_queue/struct.UsingQueue.html' title='ethcore_util::using_queue::UsingQueue'>UsingQueue</a>&lt;T&gt; <span class='where'>where T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a></span></code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(max_size: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a class='struct' href='../../ethcore_util/using_queue/struct.UsingQueue.html' title='ethcore_util::using_queue::UsingQueue'>UsingQueue</a>&lt;T&gt;</code></h4>
+<div class='docblock'><p>Create a new struct with a maximum size of <code>max_size</code>.</p>
+</div><h4 id='method.peek_last_ref' class='method'><code>fn <a href='#method.peek_last_ref' class='fnname'>peek_last_ref</a>(&amp;self) -&gt; <a class='enum' href='../../ethcore_util/standard/option/enum.Option.html' title='ethcore_util::standard::option::Option'>Option</a>&lt;&amp;T&gt;</code></h4>
+<div class='docblock'><p>Return a reference to the item at the top of the queue (or <code>None</code> if the queue is empty);
+it doesn&#39;t constitute noting that the item is used.</p>
+</div><h4 id='method.use_last_ref' class='method'><code>fn <a href='#method.use_last_ref' class='fnname'>use_last_ref</a>(&amp;mut self) -&gt; <a class='enum' href='../../ethcore_util/standard/option/enum.Option.html' title='ethcore_util::standard::option::Option'>Option</a>&lt;&amp;T&gt;</code></h4>
+<div class='docblock'><p>Return a reference to the item at the top of the queue (or <code>None</code> if the queue is empty);
+this constitutes using the item and will remain in the queue for at least another
+<code>max_size</code> invocations of <code>push()</code>.</p>
+</div><h4 id='method.push' class='method'><code>fn <a href='#method.push' class='fnname'>push</a>(&amp;mut self, b: T)</code></h4>
+<div class='docblock'><p>Place an item on the end of the queue. The previously <code>push()</code>ed item will be removed
+if <code>use_last_ref()</code> since it was <code>push()</code>ed.</p>
+</div><h4 id='method.reset' class='method'><code>fn <a href='#method.reset' class='fnname'>reset</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Clears everything; the queue is entirely reset.</p>
+</div><h4 id='method.take_used_if' class='method'><code>fn <a href='#method.take_used_if' class='fnname'>take_used_if</a>&lt;P&gt;(&amp;mut self, predicate: P) -&gt; <a class='enum' href='../../ethcore_util/standard/option/enum.Option.html' title='ethcore_util::standard::option::Option'>Option</a>&lt;T&gt; <span class='where'>where P: <a class='trait' href='../../ethcore_util/standard/ops/trait.Fn.html' title='ethcore_util::standard::ops::Fn'>Fn</a>(&amp;T) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></span></code></h4>
+<div class='docblock'><p>Returns <code>Some</code> item which is the first that <code>f</code> returns <code>true</code> with a reference to it
+as a parameter or <code>None</code> if no such item exists in the queue.</p>
+</div><h4 id='method.pop_if' class='method'><code>fn <a href='#method.pop_if' class='fnname'>pop_if</a>&lt;P&gt;(&amp;mut self, predicate: P) -&gt; <a class='enum' href='../../ethcore_util/standard/option/enum.Option.html' title='ethcore_util::standard::option::Option'>Option</a>&lt;T&gt; <span class='where'>where P: <a class='trait' href='../../ethcore_util/standard/ops/trait.Fn.html' title='ethcore_util::standard::ops::Fn'>Fn</a>(&amp;T) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></span></code></h4>
+<div class='docblock'><p>Returns the most recently pushed block if <code>f</code> returns <code>true</code> with a reference to it as
+a parameter, otherwise <code>None</code>.
+Will not destroy a block if a reference to it has previously been returned by <code>use_last_ref</code>,
+but rather clone it.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "ethcore_util";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

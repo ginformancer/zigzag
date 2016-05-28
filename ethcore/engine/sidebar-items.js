@@ -1,0 +1,1 @@
+initSidebarItems({"trait":[["Engine","A consensus mechanism for the chain. Generally either proof-of-work or proof-of-stake-based. Provides hooks into each of the major parts of block import."]]});

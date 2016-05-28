@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["ethereum","Default ethereum paths"]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["TransactionRequest","Transaction request coming from RPC"]]});

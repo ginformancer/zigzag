@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `NetworkSettings` struct in crate `ethcore_util`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, NetworkSettings">
+
+    <title>ethcore_util::network_settings::NetworkSettings - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>ethcore_util</a>::<wbr><a href='index.html'>network_settings</a></p><script>window.sidebarCurrent = {name: 'NetworkSettings', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>ethcore_util</a>::<wbr><a href='index.html'>network_settings</a>::<wbr><a class='struct' href=''>NetworkSettings</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-13067' class='srclink' href='../../src/ethcore_util/util/src/network_settings.rs.html#20-35' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct NetworkSettings {
+    pub name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub chain: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub max_peers: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub network_port: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>,
+    pub rpc_enabled: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub rpc_interface: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub rpc_port: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>,
+}</pre><div class='docblock'><p>Networking &amp; RPC settings</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                             <td id='structfield.name'><code>name</code></td><td><div class='docblock'><p>Node name</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.chain'><code>chain</code></td><td><div class='docblock'><p>Name of the chain we are connected to</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.max_peers'><code>max_peers</code></td><td><div class='docblock'><p>Ideal number of peers</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.network_port'><code>network_port</code></td><td><div class='docblock'><p>Networking port</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.rpc_enabled'><code>rpc_enabled</code></td><td><div class='docblock'><p>Is JSON-RPC server enabled?</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.rpc_interface'><code>rpc_interface</code></td><td><div class='docblock'><p>Interface that JSON-RPC listens on</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.rpc_port'><code>rpc_port</code></td><td><div class='docblock'><p>Port for JSON-RPC server</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='../../ethcore_util/standard/cmp/trait.PartialEq.html' title='ethcore_util::standard::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../../ethcore_util/network_settings/struct.NetworkSettings.html' title='ethcore_util::network_settings::NetworkSettings'>NetworkSettings</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='../../ethcore_util/standard/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../ethcore_util/network_settings/struct.NetworkSettings.html' title='ethcore_util::network_settings::NetworkSettings'>NetworkSettings</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='../../ethcore_util/standard/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../ethcore_util/network_settings/struct.NetworkSettings.html' title='ethcore_util::network_settings::NetworkSettings'>NetworkSettings</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='../../ethcore_util/standard/fmt/trait.Debug.html' title='ethcore_util::standard::fmt::Debug'>Debug</a> for <a class='struct' href='../../ethcore_util/network_settings/struct.NetworkSettings.html' title='ethcore_util::network_settings::NetworkSettings'>NetworkSettings</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='../../ethcore_util/standard/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='../../ethcore_util/standard/fmt/struct.Formatter.html' title='ethcore_util::standard::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='../../ethcore_util/standard/fmt/type.Result.html' title='ethcore_util::standard::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "ethcore_util";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

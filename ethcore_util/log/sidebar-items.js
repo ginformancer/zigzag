@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["init_log","Intialize log with default settings"]],"struct":[["RotatingLogger","Logger implementation that keeps up to `LOG_SIZE` log elements."]]});

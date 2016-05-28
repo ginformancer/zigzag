@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["BasicAuthority","Ethash engine deserialization."],["BasicAuthorityParams","Ethash params deserialization."]]});
